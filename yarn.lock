@@ -459,10 +459,10 @@
   resolved "https://registry.npmmirror.com/@resvg/resvg-wasm/-/resvg-wasm-2.0.0-alpha.4.tgz#fc2f86186a9641df030d8f9f3f9d995899cd1ecb"
   integrity sha512-pWIG9a/x1ky8gXKRhPH1OPKpHFoMN1ISLbJ+O+gPXQHIAKhNd5I28RlWf7q576hAOQA9JZTlo3p/M2uyLzJmmw==
 
-"@sentry/types@^7.2.0":
-  version "7.21.1"
-  resolved "https://registry.npmmirror.com/@sentry/types/-/types-7.21.1.tgz#408a7b95a66ddc30c4359979594e03bee8f9fbdc"
-  integrity sha512-3/IKnd52Ol21amQvI+kz+WB76s8/LR5YvFJzMgIoI2S8d82smIr253zGijRXxHPEif8kMLX4Yt+36VzrLxg6+A==
+"@sentry/types@^6.11.0":
+  version "6.19.7"
+  resolved "https://registry.npmmirror.com/@sentry/types/-/types-6.19.7.tgz#c6b337912e588083fc2896eb012526cf7cfec7c7"
+  integrity sha512-jH84pDYE+hHIbVnab3Hr+ZXr1v8QABfhx39KknxqKWr2l0oEItzepV0URvbEhB446lk/S/59230dlUUIBGsXbg==
 
 "@shuding/opentype.js@1.4.0-beta.0":
   version "1.4.0-beta.0"
@@ -2920,13 +2920,13 @@ postcss@^8.1.10:
     source-map-js "^1.0.2"
 
 posthog-js@^1.20.2:
-  version "1.36.0"
-  resolved "https://registry.npmmirror.com/posthog-js/-/posthog-js-1.36.0.tgz#cbefa031a1e7ee6ff25dae29b8aa77bd741adbba"
-  integrity sha512-LL9lbJxN46GbckRKSFZxX7fwNAvKUbi5nLFF0hMkmKY9o9zoz58oA0DJBZkqyEXK+15XzNoyLxF+wnxSPNwn3g==
+  version "1.20.2"
+  resolved "https://registry.npmjs.org/posthog-js/-/posthog-js-1.20.2.tgz"
+  integrity sha512-0HxG2aVObhGz6I98+N/tTZ0Azkus6vYPDS+TiDFO1UWx88QVzflcTAhybsBdhG0xfmghuC6jvFui73hjdimZeg==
   dependencies:
-    "@sentry/types" "^7.2.0"
+    "@sentry/types" "^6.11.0"
     fflate "^0.4.1"
-    rrweb-snapshot "^1.1.14"
+    rrweb-snapshot "^1.1.7"
 
 prebuild-install@^6.1.2:
   version "6.1.4"
@@ -3276,7 +3276,7 @@ rimraf@^3.0.2:
   dependencies:
     glob "^7.1.3"
 
-rrweb-snapshot@^1.1.14:
+rrweb-snapshot@^1.1.7:
   version "1.1.14"
   resolved "https://registry.npmmirror.com/rrweb-snapshot/-/rrweb-snapshot-1.1.14.tgz#9d4d9be54a28a893373428ee4393ec7e5bd83fcc"
   integrity sha512-eP5pirNjP5+GewQfcOQY4uBiDnpqxNRc65yKPW0eSoU1XamDfc4M8oqpXGMyUyvLyxFDB0q0+DChuxxiU2FXBQ==
