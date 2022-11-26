@@ -20,13 +20,13 @@ import { searchNotion } from '@/lib/search-notion'
 import { useDarkMode } from '@/lib/use-dark-mode'
 import { Analytics } from '@vercel/analytics/react'
 import { Footer } from './Footer'
-// import { GitHubShareButton } from './GitHubShareButton'
 import { Loading } from './Loading'
 import { NotionPageHeader } from './NotionPageHeader'
 import { Page404 } from './Page404'
 import { PageAside } from './PageAside'
 import { PageHead } from './PageHead'
 import styles from './styles.module.css'
+import DisqusComments from '@/components/DisqusComments'
 
 // -----------------------------------------------------------------------------
 // dynamic imports for optional components
@@ -278,7 +278,20 @@ export const NotionPage: React.FC<types.PageProps> = ({
         mapImageUrl={mapImageUrl}
         searchNotion={config.isSearchEnabled ? searchNotion : null}
         pageAside={pageAside}
-        footer={footer}
+        footer={
+          <>
+            <div style={{ width: '80%' }}>
+              <DisqusComments
+                post={{
+                  url: getCanonicalPageUrl(site, recordMap)(pageId),
+                  id: pageId,
+                  title: title
+                }}
+              />
+            </div>
+            {footer}
+          </>
+        }
       />
 
       <Analytics />
