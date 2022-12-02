@@ -60,6 +60,10 @@ export default siteConfig({
     {
       title: 'Contact',
       pageId: '0715c6329b5f46229e0f375d626ef718'
+    },
+    {
+      title: 'Resume',
+      pageId: 'c0f438c3461149e69eb101db065c07f6'
     }
   ]
 })
