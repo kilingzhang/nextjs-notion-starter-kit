@@ -37,22 +37,18 @@ export default siteConfig({
   // whether or not redis is enabled for caching generated preview images (optional)
   // NOTE: if you enable redis, you need to set the `REDIS_HOST` and `REDIS_PASSWORD`
   // environment variables. see the readme for more info
-  isRedisEnabled: true,
+  isRedisEnabled: false,
 
   // map of notion page IDs to URL paths (optional)
   // any pages defined here will override their default URL paths
   // example:
   //
-  // pageUrlOverrides: {
-  //   '/foo': '067dd719a912471ea9a3ac10710e7fdf',
-  //   '/bar': '0be6efce9daf42688f65c76b89f8eb27'
-  // }
   pageUrlOverrides: {
     '/resume': 'c0f438c3461149e69eb101db065c07f6'
   },
 
   // whether to use the default notion navigation style or a custom one with links to
-  // important pages. To use `navigationLinks`, set `navigationStyle` to `custom`.
+  // important pages
   navigationStyle: 'custom',
   navigationLinks: [
     {
@@ -60,12 +56,12 @@ export default siteConfig({
       pageId: '260c904c4e0b4e959a5fb35407a44385'
     },
     {
-      title: 'Resume',
-      pageId: 'c0f438c3461149e69eb101db065c07f6'
+      title: 'Contact',
+      pageId: '0715c6329b5f46229e0f375d626ef718'
     },
     {
-      title: '推荐激励',
-      pageId: '006337c470d74500bfa8b6e6f0944904'
+      title: 'Resume',
+      pageId: 'c0f438c3461149e69eb101db065c07f6'
     }
   ]
 })
