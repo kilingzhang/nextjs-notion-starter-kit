@@ -10,11 +10,11 @@ export default siteConfig({
 
   // basic site info (required)
   name: 'kilingzhang',
-  domain: 'blog.kilingzhang.com',
+  domain: '07is.me',
   author: 'kilingzhang',
 
   // open graph metadata (optional)
-  description: '一只在奋斗的小透明🎈',
+  description: '一只在前进路上的小透明 🎈',
 
   // social usernames (optional)
   twitter: '',
