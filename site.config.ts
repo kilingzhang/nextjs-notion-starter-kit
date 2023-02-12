@@ -1,4 +1,4 @@
-import { siteConfig } from './lib/site-config'
+import {siteConfig} from './lib/site-config'
 
 export default siteConfig({
   // the site's root Notion page (required)
@@ -9,9 +9,9 @@ export default siteConfig({
   rootNotionSpaceId: null,
 
   // basic site info (required)
-  name: 'kilingzhang',
+  name: '07',
   domain: '07is.me',
-  author: 'kilingzhang',
+  author: '07',
 
   // open graph metadata (optional)
   description: '一只在前进路上的小透明 🎈',
@@ -58,6 +58,10 @@ export default siteConfig({
     {
       title: 'Resume',
       pageId: 'c0f438c3461149e69eb101db065c07f6'
+    },
+    {
+      title: '推荐激励',
+      pageId: '006337c470d74500bfa8b6e6f0944904'
     }
   ]
 })
