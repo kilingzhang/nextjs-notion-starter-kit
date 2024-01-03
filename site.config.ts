@@ -9,12 +9,12 @@ export default siteConfig({
   rootNotionSpaceId: null,
 
   // basic site info (required)
-  name: 'kilingzhang',
+  name: '07',
   domain: '07is.me',
-  author: 'kilingzhang',
+  author: '07',
 
   // open graph metadata (optional)
-  description: '一只在前进路上的小透明 🎈',
+  description: 'a Blip on the Radar Moving Forward 🎈 .',
 
   // social usernames (optional)
   twitter: '',
