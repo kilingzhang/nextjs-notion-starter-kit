@@ -18,7 +18,7 @@ import { mapImageUrl } from '@/lib/map-image-url'
 import { getCanonicalPageUrl, mapPageUrl } from '@/lib/map-page-url'
 import { searchNotion } from '@/lib/search-notion'
 import { useDarkMode } from '@/lib/use-dark-mode'
-
+import { Analytics } from '@vercel/analytics/react'
 import { Footer } from './Footer'
 // import { GitHubShareButton } from './GitHubShareButton'
 import { Loading } from './Loading'
@@ -281,7 +281,7 @@ export const NotionPage: React.FC<types.PageProps> = ({
         footer={footer}
       />
 
-      {/*<GitHubShareButton />*/}
+      <Analytics />
     </>
   )
 }
