@@ -47,20 +47,25 @@ export default siteConfig({
   //   '/foo': '067dd719a912471ea9a3ac10710e7fdf',
   //   '/bar': '0be6efce9daf42688f65c76b89f8eb27'
   // }
-  pageUrlOverrides: null,
+  pageUrlOverrides: {
+    '/resume': 'c0f438c3461149e69eb101db065c07f6'
+  },
 
   // whether to use the default notion navigation style or a custom one with links to
   // important pages. To use `navigationLinks`, set `navigationStyle` to `custom`.
-  navigationStyle: 'default'
-  // navigationStyle: 'custom',
-  // navigationLinks: [
-  //   {
-  //     title: 'About',
-  //     pageId: 'f1199d37579b41cbabfc0b5174f4256a'
-  //   },
-  //   {
-  //     title: 'Contact',
-  //     pageId: '6a29ebcb935a4f0689fe661ab5f3b8d1'
-  //   }
-  // ]
+  navigationStyle: 'custom',
+  navigationLinks: [
+    {
+      title: 'About',
+      pageId: '260c904c4e0b4e959a5fb35407a44385'
+    },
+    {
+      title: 'Resume',
+      pageId: 'c0f438c3461149e69eb101db065c07f6'
+    },
+    {
+      title: '推荐激励',
+      pageId: '006337c470d74500bfa8b6e6f0944904'
+    }
+  ]
 })
