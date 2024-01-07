@@ -14,7 +14,7 @@ export default siteConfig({
   author: '07',
 
   // open graph metadata (optional)
-  description: 'a Blip on the Radar Moving Forward 🎈 .',
+  description: 'a Blip on the Radar Moving Forward 🎈.',
 
   // social usernames (optional)
   twitter: '',
