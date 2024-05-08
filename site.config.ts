@@ -52,6 +52,10 @@ export default siteConfig({
   navigationStyle: 'custom',
   navigationLinks: [
     {
+      title: 'Status',
+      url: 'https://status.07is.me'
+    },
+    {
       title: 'About',
       pageId: '260c904c4e0b4e959a5fb35407a44385'
     },
