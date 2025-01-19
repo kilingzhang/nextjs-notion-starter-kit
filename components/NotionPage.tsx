@@ -1,3 +1,4 @@
+import { Analytics } from '@vercel/analytics/react'
 import cs from 'classnames'
 import dynamic from 'next/dynamic'
 import Image from 'next/legacy/image'
@@ -16,12 +17,13 @@ import { EmbeddedTweet, TweetNotFound, TweetSkeleton } from 'react-tweet'
 import { useSearchParam } from 'react-use'
 
 import type * as types from '@/lib/types'
+import DisqusComments from '@/components/DisqusComments'
 import * as config from '@/lib/config'
 import { mapImageUrl } from '@/lib/map-image-url'
 import { getCanonicalPageUrl, mapPageUrl } from '@/lib/map-page-url'
 import { searchNotion } from '@/lib/search-notion'
 import { useDarkMode } from '@/lib/use-dark-mode'
-import { Analytics } from '@vercel/analytics/react'
+
 import { Footer } from './Footer'
 import { Loading } from './Loading'
 import { NotionPageHeader } from './NotionPageHeader'
@@ -29,7 +31,6 @@ import { Page404 } from './Page404'
 import { PageAside } from './PageAside'
 import { PageHead } from './PageHead'
 import styles from './styles.module.css'
-import DisqusComments from '@/components/DisqusComments'
 
 // -----------------------------------------------------------------------------
 // dynamic imports for optional components
@@ -295,7 +296,7 @@ export function NotionPage({
                 post={{
                   url: getCanonicalPageUrl(site, recordMap)(pageId),
                   id: pageId,
-                  title: title
+                  title
                 }}
               />
             </div>

@@ -1,7 +1,7 @@
 import { DiscussionEmbed } from 'disqus-react'
 import React from 'react'
 
-const DisqusComments = ({ post }) => {
+function DisqusComments({ post }) {
   if (post) {
     console.log('post', post)
     const disqusShortname = 'kilingzhang'
