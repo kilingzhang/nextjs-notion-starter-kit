@@ -7,7 +7,7 @@ import 'react-notion-x/src/styles.css'
 // global styles shared across the entire site
 import 'styles/global.css'
 // this might be better for dark mode
-import 'prismjs/themes/prism-okaidia.css'
+// import 'prismjs/themes/prism-okaidia.css'
 // global style overrides for notion
 import 'styles/notion.css'
 // global style overrides for prism theme (optional)
