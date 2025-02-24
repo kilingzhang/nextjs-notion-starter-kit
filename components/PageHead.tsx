@@ -10,19 +10,28 @@ export function PageHead({
   description,
   pageId,
   image,
-  url
+  url,
+  publishedTime,
+  lastUpdatedTime,
+  category,
+  tags
 }: types.PageProps & {
   title?: string
   description?: string
   image?: string
   url?: string
+  // article metadata
+  publishedTime?: string
+  lastUpdatedTime?: string
+  category?: string
+  tags?: string[]
 }) {
   const rssFeedUrl = `${config.host}/feed`
 
-  title = title ?? site?.name
-  description = description ?? site?.description
+  const pageTitle = title ?? site?.name ?? ''
+  const pageDescription = description ?? site?.description ?? ''
 
-  const socialImageUrl = getSocialImageUrl(pageId) || image
+  const socialImageUrl = pageId ? getSocialImageUrl(pageId) || image : image
 
   return (
     <Head>
@@ -54,8 +63,8 @@ export function PageHead({
 
       {site && (
         <>
-          <meta property='og:site_name' content={site.name} />
-          <meta property='twitter:domain' content={site.domain} />
+          <meta property='og:site_name' content={site.name || ''} />
+          <meta property='twitter:domain' content={site.domain || ''} />
         </>
       )}
 
@@ -63,11 +72,11 @@ export function PageHead({
         <meta name='twitter:creator' content={`@${config.twitter}`} />
       )}
 
-      {description && (
+      {pageDescription && (
         <>
-          <meta name='description' content={description} />
-          <meta property='og:description' content={description} />
-          <meta name='twitter:description' content={description} />
+          <meta name='description' content={pageDescription} />
+          <meta property='og:description' content={pageDescription} />
+          <meta name='twitter:description' content={pageDescription} />
         </>
       )}
 
@@ -93,12 +102,19 @@ export function PageHead({
         rel='alternate'
         type='application/rss+xml'
         href={rssFeedUrl}
-        title={site?.name}
+        title={site?.name || ''}
       />
 
-      <meta property='og:title' content={title} />
-      <meta name='twitter:title' content={title} />
-      <title>{title}</title>
+      <meta property='og:title' content={pageTitle} />
+      <meta name='twitter:title' content={pageTitle} />
+      <meta property='article:published_time' content={publishedTime || ''} />
+      <meta property='article:modified_time' content={lastUpdatedTime || ''} />
+      <meta property='article:author' content={config.author || ''} />
+      <meta property='article:section' content={category || ''} />
+      {tags?.map((tag) => (
+        <meta property='article:tag' content={tag} key={tag} />
+      ))}
+      <title>{pageTitle}</title>
     </Head>
   )
 }

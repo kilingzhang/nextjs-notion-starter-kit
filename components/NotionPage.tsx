@@ -244,8 +244,8 @@ export function NotionPage({
 
   const socialImage = mapImageUrl(
     getPageProperty<string>('Social Image', block, recordMap) ||
-      (block as PageBlock).format?.page_cover ||
-      config.defaultPageCover,
+    (block as PageBlock).format?.page_cover ||
+    config.defaultPageCover,
     block
   )
 
@@ -262,6 +262,16 @@ export function NotionPage({
         description={socialDescription}
         image={socialImage}
         url={canonicalPageUrl}
+        tags={getPageProperty<string[]>('Tags', block, recordMap) ?? []}
+        publishedTime={
+          getPageProperty<string>('Published', block, recordMap) ||
+          formatDate(block?.created_time)
+        }
+        lastUpdatedTime={
+          getPageProperty<string>('Last Updated', block, recordMap) ||
+          formatDate(block?.last_edited_time)
+        }
+        category={getPageProperty<string>('Category', block, recordMap)}
       />
 
       {isLiteMode && <BodyClassName className='notion-lite' />}
