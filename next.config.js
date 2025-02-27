@@ -6,6 +6,9 @@ const withBundleAnalyzer = bundleAnalyzer({
   enabled: process.env.ANALYZE === 'true'
 })
 
+// 添加构建时间戳
+const buildTimestamp = new Date().toISOString()
+
 export default withBundleAnalyzer({
   staticPageGenerationTimeout: 300,
   images: {
@@ -36,5 +39,10 @@ export default withBundleAnalyzer({
   },
 
   // See https://react-tweet.vercel.app/next#troubleshooting
-  transpilePackages: ['react-tweet']
+  transpilePackages: ['react-tweet'],
+  
+  // 添加环境变量
+  env: {
+    BUILD_TIMESTAMP: buildTimestamp
+  }
 })

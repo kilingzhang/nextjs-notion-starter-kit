@@ -14,7 +14,7 @@ export const getStaticProps: GetStaticProps<PageProps, Params> = async (
   try {
     const props = await resolveNotionPage(domain, rawPageId)
 
-    return { props, revalidate: 10 }
+    return { props, revalidate: 86_400 } // 增加到24小时，减少重新生成频率
   } catch (err) {
     console.error('page error', domain, rawPageId, err)
 
@@ -41,13 +41,13 @@ export async function getStaticPaths() {
       }
     })),
     // paths: [],
-    fallback: true
+    fallback: 'blocking' // 改为blocking，确保用户始终看到完整渲染的页面
   }
 
   console.log(staticPaths.paths)
   return staticPaths
 }
 
-export default function NotionDomainDynamicPage(props) {
+export default function NotionDomainDynamicPage(props: PageProps) {
   return <NotionPage {...props} />
 }

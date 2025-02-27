@@ -20,6 +20,15 @@ export function FooterImpl() {
   const [hasMounted, setHasMounted] = React.useState(false)
   const { isDarkMode, toggleDarkMode } = useDarkMode()
   const currentYear = new Date().getFullYear()
+  const buildTimestamp = process.env.BUILD_TIMESTAMP
+  const lastUpdated = buildTimestamp ? new Date(buildTimestamp).toLocaleDateString('zh-CN', {
+    year: 'numeric',
+    month: '2-digit',
+    day: '2-digit',
+    hour: '2-digit',
+    minute: '2-digit',
+    second: '2-digit',
+  }) : ''
 
   const onToggleDarkMode = React.useCallback(
     (e) => {
@@ -37,6 +46,9 @@ export function FooterImpl() {
     <footer className={styles.footer}>
       <div className={styles.copyright}>
         Copyright {currentYear} {config.author}
+        {lastUpdated && (
+          <> · 最后更新于 {lastUpdated} </>
+        )}
       </div>
 
       <div className={styles.settings}>
